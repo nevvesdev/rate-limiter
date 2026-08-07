@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: rate-limiter-java
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: rate-limiter-java
+    description: Rate Limiter com Token Bucket e Sliding Window
+    version: 0.0.1-SNAPSHOT
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
