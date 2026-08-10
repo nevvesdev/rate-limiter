@@ -25,3 +25,9 @@ springdoc:
     path: /api-docs
   swagger-ui:
     path: /swagger-ui.html
+
+rate-limiter:
+  algorithm: token-bucket   # token-bucket | sliding-window
+  capacity: 10
+  refill-rate-per-second: 5
+  window-size-millis: 60000
