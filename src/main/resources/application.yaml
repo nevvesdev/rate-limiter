@@ -27,7 +27,7 @@ springdoc:
     path: /swagger-ui.html
 
 rate-limiter:
-  algorithm: token-bucket   # token-bucket | sliding-window
-  capacity: 10
-  refill-rate-per-second: 5
-  window-size-millis: 60000
+  algorithm: ${RATE_LIMITER_ALGORITHM:token-bucket}
+  capacity: ${RATE_LIMITER_CAPACITY:10}
+  refill-rate-per-second: ${RATE_LIMITER_REFILL_RATE_PER_SECOND:5}
+  window-size-millis: ${RATE_LIMITER_WINDOW_SIZE_MILLIS:60000}
